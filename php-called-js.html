@@ -15,11 +15,12 @@
   <h1>JavaScriptでPHPを動かせるか？</h1>
   <p id="result"></p>
   <script>
+    var url = "sampleVal=" + location.href;
     $.ajax({
       type: "POST",
       url: "http://netpartner.sakura.ne.jp/gas-test//sample.php",
       cache: false,
-      data: "sampleVal=" + (url),
+      data: url,
       success: function(html){
         $( '#result' ) . text(html);
       }
