@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <title>JavaScriptでPHPを動かせるか？</title>
+  <style>
+    body {
+      width: 45em;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScriptでPHPを動かせるか？</h1>
+  <p id="result"></p>
+  <script>
+    $.ajax({
+      type: "POST",
+      url: "http://netpartner.sakura.ne.jp/gas-test/sample.php",
+      cache: false,
+      data: "sampleVal=test",
+      success: function(html){
+        $( '#result' ) . text(html);
+      }
+    });
+  </script>
+</body>
+</html>
