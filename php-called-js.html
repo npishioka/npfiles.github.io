@@ -19,7 +19,7 @@
       type: "POST",
       url: "http://netpartner.sakura.ne.jp/gas-test//sample.php",
       cache: false,
-      data: "sampleVal=test",
+      data: "sampleVal=" + (url),
       success: function(html){
         $( '#result' ) . text(html);
       }
