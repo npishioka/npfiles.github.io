@@ -18,11 +18,11 @@
     var url = "sampleVal=" + location.href;
     $.ajax({
       type: "POST",
-      url: "http://netpartner.sakura.ne.jp/gas-test//sample.php",
+      url: "sample.php",
       cache: false,
       data: url,
       success: function(html){
-        $( '#result' ) . text(html);
+        $( '#result' ) . html(html);
       }
     });
   </script>
