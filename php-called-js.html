@@ -13,7 +13,7 @@
 </head>
 <body>
   <h1>JavaScriptでPHPを動かせるか？</h1>
-  <p id="result"></p>
+  <ul id="result"></ul>
   <script>
     var url = "sampleVal=" + location.href;
     $.ajax({
@@ -22,7 +22,7 @@
       cache: false,
       data: url,
       success: function(html){
-        $( '#result' ) . text(html);
+        $( '#result' ) . html(html);
       }
     });
   </script>
