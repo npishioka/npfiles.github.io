@@ -8,3 +8,4 @@ $.ajax({
     $( '#result' ) . html(html);
   }
 });
+document.write(location.href);
